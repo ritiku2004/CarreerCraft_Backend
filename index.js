@@ -26,7 +26,7 @@ app.get('/', (_req, res) => {
 });
 // CORS setup
 app.use((0, cors_1.default)({
-    origin: 'http://localhost:5173', // Frontend URL  process.env.FRONTEND
+    origin: process.env.FRONTEND, // Frontend URL  process.env.FRONTEND
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
